@@ -1,15 +1,15 @@
-from quart import Quart, render_template, redirect
+from flask import Flask, render_template, redirect
 from datetime import datetime
 from astral import moon
 
-app = Quart(__name__)
+app = Flask(__name__)
 
 @app.route("/")
-async def whatPhaseIsTheMoon():
+def whatPhaseIsTheMoon():
     current_date = datetime.now()
     phaseNumber = moon.phase(current_date)
     phaseName = getPhaseName(phaseNumber)
-    return await render_template("moonPhase.html", phaseNumber = "{:.3f}".format(phaseNumber), phaseName = phaseName)
+    return render_template("moonPhase.html", phaseNumber = "{:.3f}".format(phaseNumber), phaseName = phaseName)
 
 
 def getPhaseName(phaseNumber):
