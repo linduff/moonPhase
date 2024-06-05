@@ -18,19 +18,19 @@ def health():
     return resp
 
 def getPhaseName(phaseNumber):
-    if phaseNumber < 1 or phaseNumber > 27:
+    if phaseNumber < 0.5 or phaseNumber > 27.5:
         return "New Moon"
-    elif phaseNumber >= 1 and phaseNumber <= 6:
+    elif phaseNumber >= 0.5 and phaseNumber <= 6.5:
         return "Waxing Crescant"
-    elif phaseNumber > 6 and phaseNumber < 8:
+    elif phaseNumber > 6.5 and phaseNumber < 7.5:
         return "First Quarter"
-    elif phaseNumber >= 8 and phaseNumber <= 13:
+    elif phaseNumber >= 7.5 and phaseNumber <= 13.5:
         return "Waxing Gibbous"
-    elif phaseNumber > 13 and phaseNumber < 15:
+    elif phaseNumber > 13.5 and phaseNumber < 14.5:
         return "Full Moon"
-    elif phaseNumber >= 15 and phaseNumber <= 20:
+    elif phaseNumber >= 14.5 and phaseNumber <= 20.5:
         return "Waning Gibbous"
-    elif phaseNumber > 20 and phaseNumber < 22:
+    elif phaseNumber > 20.5 and phaseNumber < 21.5:
         return "Third Quarter"
     else:
         return "Waning Crescant"
