@@ -11,6 +11,11 @@ def whatPhaseIsTheMoon():
     phaseName = getPhaseName(phaseNumber)
     return render_template("moonPhase.html", phaseNumber = "{:.3f}".format(phaseNumber), phaseName = phaseName)
 
+@app.route('/healthcheck')
+def health():
+    resp = jsonify(health="healthy")
+    resp.status_code = 200
+    return resp
 
 def getPhaseName(phaseNumber):
     if phaseNumber < 1 or phaseNumber > 27:
