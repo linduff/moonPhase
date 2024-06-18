@@ -11,11 +11,20 @@
     color: #eeeeee;
 }
 
+.art {
+    font-size: 300%;
+    font-family: monospace, monospace;
+    line-height: 20%;
+}
+
+.artline {
+    white-space:pre;
+}
+
 .name {
-    font-size: 800%;
-    
+    font-size: 300%;
 }
 
 .number {
-    font-size: 100%;
+    font-size: 70%;
 }
